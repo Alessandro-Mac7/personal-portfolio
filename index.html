@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro Macr&igrave; — Solution Architect & Team Leader</title>
+  <meta name="description" content="Alessandro Macr&igrave; — Solution Architect &amp; Team Leader. Builder of cloud-native systems, crafter of artisan gin, and pixel art enthusiast.">
+  <meta property="og:title" content="Alessandro Macr&igrave; — Solution Architect &amp; Team Leader">
+  <meta property="og:description" content="Builder of cloud-native systems, crafter of artisan gin. 8-bit retro portfolio.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect fill='%230f0f23' width='1200' height='630'/%3E%3Ctext x='600' y='280' text-anchor='middle' fill='%2300ff41' font-family='monospace' font-size='48' font-weight='bold'%3EALESSANDRO MACRI%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' fill='%23ff6b35' font-family='monospace' font-size='28'%3ESolution Architect %26 Team Leader%3C/text%3E%3Ctext x='600' y='420' text-anchor='middle' fill='%2300d4ff' font-family='monospace' font-size='20'%3E%25 PRESS START %25%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0f0f23">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect x='2' y='2' width='12' height='12' fill='%2300ff41'/><rect x='4' y='4' width='3' height='3' fill='%230f0f23'/><rect x='9' y='4' width='3' height='3' fill='%230f0f23'/><rect x='4' y='9' width='8' height='2' fill='%230f0f23'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- CRT Scanline Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">AM</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-section="about">ABOUT</a></li>
+      <li><a href="#experience" data-section="experience">QUESTS</a></li>
+      <li><a href="#projects" data-section="projects">ACHIEVEMENTS</a></li>
+      <li><a href="#techstack" data-section="techstack">INVENTORY</a></li>
+      <li><a href="#sidequests" data-section="sidequests">OFF-DUTY</a></li>
+      <li><a href="#testimonials" data-section="testimonials">PARTY</a></li>
+      <li><a href="#contact" data-section="contact">SAVE</a></li>
+      <li><a href="#snake" data-section="snake">BONUS</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" class="nav-resume-btn">&#128196; RESUME</a></li>
+    </ul>
+  </nav>
+
+  <!-- Star Field Canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="boot-sequence" id="bootSequence">
+        <div class="boot-line" data-delay="0">
+          <span class="prompt">&gt;</span> INITIALIZING SYSTEM...
+        </div>
+        <div class="boot-line" data-delay="800">
+          <span class="prompt">&gt;</span> LOADING ASSETS... <span class="progress-bar" id="progressBar"></span>
+        </div>
+        <div class="boot-line" data-delay="2400">
+          <span class="prompt">&gt;</span> PLAYER 1 DETECTED: <span class="highlight glitch-text" data-text="ALESSANDRO MACR&Igrave;">ALESSANDRO MACR&Igrave;</span>
+        </div>
+        <div class="boot-line" data-delay="3800">
+          <span class="prompt">&gt;</span> CLASS: <span class="accent">SOLUTION ARCHITECT &amp; TEAM LEADER</span>
+        </div>
+        <div class="boot-line" data-delay="5200">
+          <span class="prompt">&gt;</span> STATUS: <span class="status-badge"><span class="status-ping"></span> AVAILABLE FOR NEW QUESTS</span>
+        </div>
+      </div>
+      <div class="hero-cta" id="heroCta">
+        <a href="#about" class="btn-pixel btn-pulse">&#9654; START GAME</a>
+        <a href="assets/resume.pdf" target="_blank" class="btn-pixel btn-resume">&#128196; DOWNLOAD RESUME</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#9824;</span> ABOUT ME
+      </h2>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <div class="pixel-avatar" id="pixelAvatar" aria-label="Pixel art avatar">
+            <div class="avatar-row">
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#f4c542"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#1a1a2e"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#1a1a2e"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#e8a87c"></span>
+              <span class="px" style="background:#e8a87c"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#c0392b"></span>
+              <span class="px" style="background:#c0392b"></span>
+              <span class="px" style="background:#c0392b"></span>
+              <span class="px" style="background:#c0392b"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#00d4ff"></span>
+              <span class="px" style="background:#00d4ff"></span>
+              <span class="px" style="background:#00d4ff"></span>
+              <span class="px" style="background:#00d4ff"></span>
+              <span class="px" style="background:#00d4ff"></span>
+              <span class="px" style="background:#00d4ff"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+            </div>
+            <div class="avatar-row">
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#f5d6a8"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+              <span class="px" style="background:#2d2d2d"></span>
+            </div>
+          </div>
+        </div>
+        <div class="about-info">
+          <div class="dialog-box">
+            <div class="dialog-header">&#9654; PLAYER INFO</div>
+            <p class="dialog-text" id="dialogText">
+              I'm a Solution Architect and Team Leader who thrives on turning complex challenges into elegant, scalable systems. I design cloud-native architectures, lead engineering teams, and obsess over clean, event-driven solutions. Endlessly curious — whether it's a new framework, a distributed systems pattern, or perfecting a high-hydration pizza dough, I dive deep. When I'm not shipping microservices, you'll find me distilling small-batch gin with locally foraged botanicals or experimenting with crispy, slow-fermented pizza recipes. I believe the best ideas — in code and in the kitchen — come from bold experimentation and restless creativity.
+            </p>
+          </div>
+          <div class="stats-container">
+            <div class="stat-item">
+              <span class="stat-label">LEADERSHIP</span>
+              <div class="stat-bar-bg"><div class="stat-bar" data-value="95"></div></div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">ARCHITECTURE</span>
+              <div class="stat-bar-bg"><div class="stat-bar" data-value="92"></div></div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">CREATIVITY</span>
+              <div class="stat-bar-bg"><div class="stat-bar" data-value="90"></div></div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">PROBLEM SOLVING</span>
+              <div class="stat-bar-bg"><div class="stat-bar" data-value="93"></div></div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">CURIOSITY</span>
+              <div class="stat-bar-bg"><div class="stat-bar" data-value="99"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS COUNTER SECTION ========== -->
+  <section class="stats-counters" id="statsCounters">
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-item reveal-section">
+          <div class="counter-prefix">+</div>
+          <div class="counter-number" id="counterYears" data-target-dynamic="years-since-2019">0</div>
+          <div class="counter-label">YEARS OF<br>EXPERIENCE</div>
+        </div>
+        <div class="counter-divider"></div>
+        <div class="counter-item reveal-section">
+          <div class="counter-prefix">+</div>
+          <div class="counter-number" data-target="46">0</div>
+          <div class="counter-label">PROJECTS<br>COMPLETED</div>
+        </div>
+        <div class="counter-divider"></div>
+        <div class="counter-item reveal-section">
+          <div class="counter-prefix">+</div>
+          <div class="counter-number" data-target="20">0</div>
+          <div class="counter-label">WORLDWIDE<br>CLIENTS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#9876;</span> QUEST LOG
+      </h2>
+      <div class="xp-counter">
+        TOTAL XP: <span id="xpCount">0</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line" id="timelineLine"></div>
+
+        <div class="timeline-item left reveal-section" data-xp="5000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card pixel-border">
+            <div class="quest-badge">&#9733; MAIN QUEST</div>
+            <h3>Solution Architect &amp; Team Leader</h3>
+            <div class="quest-location">Current Chapter</div>
+            <div class="quest-date">NOW</div>
+            <p>
+              Leading engineering teams and designing cloud-native architectures at scale.
+              Crafting distributed systems built on microservices, DDD, and event-driven patterns
+              with asynchronous messaging (Kafka, SQS, ActiveMQ). Defining technical standards,
+              mentoring developers, and bridging the gap between business vision and production-grade systems
+              on AWS and Azure.
+            </p>
+            <div class="quest-rewards">
+              <span class="reward-tag">+2500 XP Leadership</span>
+              <span class="reward-tag">+1500 XP Cloud</span>
+              <span class="reward-tag">+1000 XP Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal-section" data-xp="3500">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card pixel-border">
+            <div class="quest-badge">&#9733; SIDE QUEST</div>
+            <h3>Senior Software Engineer</h3>
+            <div class="quest-location">The Scaling Years</div>
+            <div class="quest-date">Previous Chapter</div>
+            <p>
+              Built high-throughput backend systems with Java, Spring Boot, and Node.js.
+              Deep-dived into NoSQL databases (MongoDB, DynamoDB, CosmosDB) and SQL data stores.
+              Designed RESTful and reactive APIs, implemented CI/CD pipelines, and championed
+              clean architecture practices across the stack.
+            </p>
+            <div class="quest-rewards">
+              <span class="reward-tag">+2000 XP Backend</span>
+              <span class="reward-tag">+1000 XP Databases</span>
+              <span class="reward-tag">+500 XP DevOps</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal-section" data-xp="2000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card pixel-border">
+            <div class="quest-badge">&#9733; ORIGIN STORY</div>
+            <h3>Software Developer</h3>
+            <div class="quest-location">Where It All Began</div>
+            <div class="quest-date">The First Commit</div>
+            <p>
+              Fell in love with code and never looked back. Built the foundations across
+              multiple languages and paradigms. Learned that great software is not just about
+              writing code — it's about solving real problems with curiosity and craftsmanship.
+            </p>
+            <div class="quest-rewards">
+              <span class="reward-tag">+1000 XP Coding</span>
+              <span class="reward-tag">+500 XP Curiosity</span>
+              <span class="reward-tag">+500 XP Growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#127942;</span> ACHIEVEMENTS
+      </h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-section" data-index="0">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="card-inner">
+            <div class="card-front pixel-border">
+              <div class="project-icon">&#127863;</div>
+              <h3>Wyn-AI</h3>
+              <p>An AI-powered sommelier that delivers real-time wine recommendations — scan a label, ask a question, get expert advice from your pocket.</p>
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Multi-LLM</span>
+                <span class="tag">Vision AI</span>
+              </div>
+              <div class="card-hint">&#9654; HOVER FOR DETAILS</div>
+            </div>
+            <div class="card-back pixel-border">
+              <h3>Wyn-AI</h3>
+              <p>Full-stack AI sommelier platform with multi-provider LLM architecture (Groq, OpenAI, Anthropic) and automatic fallback. Features wine label OCR via Vision AI, fuzzy matching against venue inventories, QR-based restaurant mode, voice input, and a mobile-first experience built with Next.js, Supabase, and Capacitor.</p>
+              <div class="project-links">
+                <a href="#" class="pixel-link">&#128187; SOURCE</a>
+                <a href="#" class="pixel-link pixel-link-accent">&#9654; LIVE DEMO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-section" data-index="1">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="card-inner">
+            <div class="card-front pixel-border">
+              <div class="project-icon">&#128141;</div>
+              <h3>Opus</h3>
+              <p>A premium digital wedding invitation platform — beautifully animated, fully customizable, with smart RSVP management built in.</p>
+              <div class="project-tags">
+                <span class="tag">Next.js 16</span>
+                <span class="tag">React 19</span>
+                <span class="tag">Supabase</span>
+              </div>
+              <div class="card-hint">&#9654; HOVER FOR DETAILS</div>
+            </div>
+            <div class="card-back pixel-border">
+              <h3>Opus</h3>
+              <p>SaaS platform for creating interactive digital invitations with GSAP/Framer Motion animations, three security modes (public, PIN, individual links), dietary tracking, drag-and-drop builders, QR guest codes, real-time analytics dashboard, and a complete admin suite. Built with Next.js 16, React 19, Supabase, and TailwindCSS.</p>
+              <div class="project-links">
+                <a href="#" class="pixel-link">&#128187; SOURCE</a>
+                <a href="#" class="pixel-link pixel-link-accent">&#9654; LIVE DEMO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-section" data-index="2">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="card-inner">
+            <div class="card-front pixel-border">
+              <div class="project-icon">&#128269;</div>
+              <h3>Code-Troubleshooter</h3>
+              <p>An intelligent debugging system that reads your error logs, retrieves the actual code via RAG, and delivers precise, context-aware analysis.</p>
+              <div class="project-tags">
+                <span class="tag">n8n</span>
+                <span class="tag">RAG</span>
+                <span class="tag">AI Workflows</span>
+              </div>
+              <div class="card-hint">&#9654; HOVER FOR DETAILS</div>
+            </div>
+            <div class="card-back pixel-border">
+              <h3>Code-Troubleshooter</h3>
+              <p>Automated debugging pipeline built on n8n workflows and AI. Ingests error logs, uses Retrieval-Augmented Generation to fetch the relevant real code snippets from the codebase, and produces detailed root-cause analysis with actionable fix suggestions — grounded in actual source code, not hallucinated guesses.</p>
+              <div class="project-links">
+                <a href="#" class="pixel-link">&#128187; SOURCE</a>
+                <a href="#" class="pixel-link pixel-link-accent">&#9654; LIVE DEMO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK SECTION ========== -->
+  <section class="section" id="techstack">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#127890;</span> INVENTORY
+      </h2>
+
+      <div class="inventory-category">
+        <h3 class="category-title">&#9876; LANGUAGES</h3>
+        <div class="inventory-grid">
+          <div class="inventory-item reveal-section" data-tooltip="Java — Primary weapon of choice">
+            <span class="item-icon">&#9749;</span>
+            <span class="item-name">Java</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Python — Versatile companion">
+            <span class="item-icon">&#128013;</span>
+            <span class="item-name">Python</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="JavaScript — The classic blade">
+            <span class="item-icon">&#9889;</span>
+            <span class="item-name">JavaScript</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="TypeScript — Type-safe scripting">
+            <span class="item-icon">&#128220;</span>
+            <span class="item-name">TypeScript</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="SQL — Data sorcery">
+            <span class="item-icon">&#128451;</span>
+            <span class="item-name">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory-category">
+        <h3 class="category-title">&#128737; FRAMEWORKS &amp; RUNTIME</h3>
+        <div class="inventory-grid">
+          <div class="inventory-item reveal-section" data-tooltip="Spring Boot — Enterprise armor, battle-tested">
+            <span class="item-icon">&#127807;</span>
+            <span class="item-name">Spring Boot</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Quarkus — Supersonic Subatomic Java">
+            <span class="item-icon">&#128302;</span>
+            <span class="item-name">Quarkus</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Micronaut — Lightweight cloud-native JVM">
+            <span class="item-icon">&#9889;</span>
+            <span class="item-name">Micronaut</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Node.js — Server-side power">
+            <span class="item-icon">&#128154;</span>
+            <span class="item-name">Node.js</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="React — UI shield of choice">
+            <span class="item-icon">&#9883;</span>
+            <span class="item-name">React</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Vue.js — Progressive &amp; elegant">
+            <span class="item-icon">&#128155;</span>
+            <span class="item-name">Vue.js</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory-category">
+        <h3 class="category-title">&#128451; DATABASES</h3>
+        <div class="inventory-grid">
+          <div class="inventory-item reveal-section" data-tooltip="PostgreSQL — The relational powerhouse">
+            <span class="item-icon">&#128024;</span>
+            <span class="item-name">PostgreSQL</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="MySQL — Reliable classic">
+            <span class="item-icon">&#128172;</span>
+            <span class="item-name">MySQL</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="MSSQL Server — Enterprise SQL fortress">
+            <span class="item-icon">&#127961;</span>
+            <span class="item-name">MSSQL Server</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Oracle DB — Legacy titan">
+            <span class="item-icon">&#128308;</span>
+            <span class="item-name">Oracle DB</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="MongoDB — Document store mastery">
+            <span class="item-icon">&#127811;</span>
+            <span class="item-name">MongoDB</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="DynamoDB — AWS NoSQL power">
+            <span class="item-icon">&#9889;</span>
+            <span class="item-name">DynamoDB</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="CosmosDB — Azure global-scale NoSQL">
+            <span class="item-icon">&#127758;</span>
+            <span class="item-name">CosmosDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory-category">
+        <h3 class="category-title">&#9729; CLOUD &amp; MESSAGING</h3>
+        <div class="inventory-grid">
+          <div class="inventory-item reveal-section" data-tooltip="AWS — Primary cloud realm">
+            <span class="item-icon">&#9729;</span>
+            <span class="item-name">AWS</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Azure — Secondary cloud realm">
+            <span class="item-icon">&#128309;</span>
+            <span class="item-name">Azure</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Kafka — Event streaming backbone">
+            <span class="item-icon">&#128232;</span>
+            <span class="item-name">Kafka</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="SQS / ActiveMQ — Async messaging">
+            <span class="item-icon">&#128228;</span>
+            <span class="item-name">SQS / ActiveMQ</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Docker — Container magic">
+            <span class="item-icon">&#128051;</span>
+            <span class="item-name">Docker</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Kubernetes — Orchestration mastery">
+            <span class="item-icon">&#9781;</span>
+            <span class="item-name">Kubernetes</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="K9s — Terminal K8s UI enthusiast">
+            <span class="item-icon">&#128054;</span>
+            <span class="item-name">K9s</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory-category">
+        <h3 class="category-title">&#127942; ARCHITECTURAL PATTERNS</h3>
+        <div class="inventory-grid">
+          <div class="inventory-item reveal-section" data-tooltip="Microservices — Distributed systems at scale">
+            <span class="item-icon">&#128200;</span>
+            <span class="item-name">Microservices</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="DDD — Domain-Driven Design mastery">
+            <span class="item-icon">&#127919;</span>
+            <span class="item-name">DDD</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Event-Driven — Reactive, async systems">
+            <span class="item-icon">&#128260;</span>
+            <span class="item-name">Event-Driven</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="CQRS — Command Query Responsibility Segregation">
+            <span class="item-icon">&#128256;</span>
+            <span class="item-name">CQRS</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Event Sourcing — Immutable event log as source of truth">
+            <span class="item-icon">&#128218;</span>
+            <span class="item-name">Event Sourcing</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Saga Pattern — Distributed transaction orchestration">
+            <span class="item-icon">&#128279;</span>
+            <span class="item-name">Saga Pattern</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Hexagonal — Ports &amp; Adapters architecture">
+            <span class="item-icon">&#11042;</span>
+            <span class="item-name">Hexagonal</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Clean Architecture — Dependency inversion at its best">
+            <span class="item-icon">&#128142;</span>
+            <span class="item-name">Clean Architecture</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Circuit Breaker — Fault tolerance &amp; resilience">
+            <span class="item-icon">&#9889;</span>
+            <span class="item-name">Circuit Breaker</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="API Gateway — Single entry point, routing &amp; security">
+            <span class="item-icon">&#128682;</span>
+            <span class="item-name">API Gateway</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory-category">
+        <h3 class="category-title">&#128295; PRACTICES &amp; PRINCIPLES</h3>
+        <div class="inventory-grid">
+          <div class="inventory-item reveal-section" data-tooltip="SOLID — The five pillars of OO design">
+            <span class="item-icon">&#128167;</span>
+            <span class="item-name">SOLID</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="TDD — Test-Driven Development for confidence">
+            <span class="item-icon">&#9989;</span>
+            <span class="item-name">TDD</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="12-Factor App — Cloud-native app methodology">
+            <span class="item-icon">&#128290;</span>
+            <span class="item-name">12-Factor App</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="REST / Reactive — API design &amp; reactive streams">
+            <span class="item-icon">&#128259;</span>
+            <span class="item-name">REST / Reactive</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="CI/CD — Continuous Integration &amp; Delivery">
+            <span class="item-icon">&#9881;</span>
+            <span class="item-name">CI/CD</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="GitOps — Git as single source of truth for infra">
+            <span class="item-icon">&#128736;</span>
+            <span class="item-name">GitOps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIDE QUESTS / HOBBIES SECTION ========== -->
+  <section class="section" id="sidequests">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#127918;</span> SIDE QUESTS
+      </h2>
+      <p class="sidequests-intro">When the compiler rests, the real experiments begin.</p>
+      <div class="sidequests-grid">
+
+        <div class="sidequest-card reveal-section pixel-border">
+          <div class="sidequest-icon">&#127829;</div>
+          <h3>Pizza Artisan</h3>
+          <p>
+            I treat dough like code — every variable matters. From Neapolitan pillowy softness to
+            Roman-style crunch, I experiment with high-hydration sourdough, long cold fermentations,
+            ancient flour blends, and that elusive leopard-spotted char. Every pizza is a prototype,
+            every bake is an iteration.
+          </p>
+          <div class="sidequest-tags">
+            <span class="tag">Sourdough</span>
+            <span class="tag">High Hydration</span>
+            <span class="tag">Neapolitan</span>
+            <span class="tag">Roman Pinsa</span>
+            <span class="tag">Fermentation</span>
+          </div>
+        </div>
+
+        <div class="sidequest-card reveal-section pixel-border">
+          <div class="sidequest-icon">&#127864;</div>
+          <h3>Gin Distiller</h3>
+          <p>
+            I craft small-batch gin from scratch, designing recipes that celebrate local terroir.
+            Wild juniper, hand-picked citrus, foraged herbs from the surrounding hills — each botanical
+            is carefully selected and balanced. Every batch is an experiment in flavor architecture,
+            blending tradition with bold new combinations.
+          </p>
+          <div class="sidequest-tags">
+            <span class="tag">Botanicals</span>
+            <span class="tag">Small-Batch</span>
+            <span class="tag">Local Terroir</span>
+            <span class="tag">Recipe Design</span>
+            <span class="tag">Craft Spirits</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#128101;</span> PARTY MEMBERS SAY...
+      </h2>
+      <p class="testimonials-intro">Words from allies encountered along the journey.</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal-section pixel-border">
+          <div class="testimonial-quote">
+            &ldquo;Alessandro has a rare ability to see the big picture while nailing the details. His architectural decisions are always well-reasoned, and he lifts the entire team's technical game.&rdquo;
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">&#9876;</span>
+            <div>
+              <div class="testimonial-name">Fellow Architect</div>
+              <div class="testimonial-role">Engineering Ally</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-section pixel-border">
+          <div class="testimonial-quote">
+            &ldquo;Working with him is like having a mentor and a teammate rolled into one. He pushes you to grow but always has your back. The kind of leader every developer deserves.&rdquo;
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">&#128300;</span>
+            <div>
+              <div class="testimonial-name">Team Member</div>
+              <div class="testimonial-role">Dev Squad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-section pixel-border">
+          <div class="testimonial-quote">
+            &ldquo;He turned a chaotic legacy system into a clean, scalable architecture — and somehow made the process enjoyable. His energy and curiosity are contagious.&rdquo;
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">&#127775;</span>
+            <div>
+              <div class="testimonial-name">Project Stakeholder</div>
+              <div class="testimonial-role">Quest Giver</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#128190;</span> SAVE POINT
+      </h2>
+      <div class="save-point-container">
+        <div class="save-animation" id="saveAnimation">
+          <div class="save-icon">&#128190;</div>
+          <span class="save-text">SAVING PROGRESS...</span>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-box pixel-border">
+            <p class="contact-intro">Ready to team up on the next quest? Let's connect!</p>
+            <div class="contact-links">
+              <a href="https://github.com/Alessandro-Mac7" target="_blank" rel="noopener noreferrer" class="contact-link pixel-link-hover">
+                <span class="link-icon">&#128187;</span> GITHUB
+              </a>
+              <a href="mailto:alessandro.macri95@gmail.com" class="contact-link pixel-link-hover">
+                <span class="link-icon">&#128231;</span> EMAIL
+              </a>
+              <a href="https://www.linkedin.com/in/alessandro-macr%C3%AD-807a05153" target="_blank" rel="noopener noreferrer" class="contact-link pixel-link-hover">
+                <span class="link-icon">&#128101;</span> LINKEDIN
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-box pixel-border">
+            <div class="form-header">&#9654; SEND MESSAGE</div>
+            <form class="pixel-form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+              <div class="form-group">
+                <label for="formName">NAME</label>
+                <input type="text" id="formName" name="name" required placeholder="Your name...">
+              </div>
+              <div class="form-group">
+                <label for="formEmail">EMAIL</label>
+                <input type="email" id="formEmail" name="email" required placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label for="formMessage">MESSAGE</label>
+                <textarea id="formMessage" name="message" rows="4" required placeholder="Write your message..."></textarea>
+              </div>
+              <button type="submit" class="btn-pixel btn-form-submit">&#128232; SEND</button>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <span>&#9989;</span> MESSAGE SENT! I'll get back to you soon.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pixel-wave-container" aria-hidden="true">
+        <div class="pixel-wave" id="pixelWave"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SNAKE GAME SECTION ========== -->
+  <section class="section" id="snake">
+    <div class="container">
+      <h2 class="section-title glow-text">
+        <span class="section-icon">&#127918;</span> BONUS STAGE
+      </h2>
+      <div class="snake-game-container">
+        <div class="snake-hud">
+          <div class="snake-score">SCORE: <span id="snakeScore">0</span></div>
+          <div class="snake-highscore">HI-SCORE: <span id="snakeHighScore">0</span></div>
+          <button class="btn-pixel btn-sound" id="soundToggle" title="Toggle Sound">&#128264; SFX</button>
+        </div>
+        <div class="snake-canvas-wrapper pixel-border">
+          <canvas id="snakeCanvas" width="400" height="400"></canvas>
+          <div class="snake-overlay" id="snakeOverlay">
+            <div class="snake-start-text">&#127918; SNAKE</div>
+            <button class="btn-pixel" id="snakeStart">PRESS START</button>
+          </div>
+        </div>
+        <div class="snake-dpad" id="snakeDpad">
+          <button class="dpad-btn dpad-up" data-dir="up">&#9650;</button>
+          <div class="dpad-middle-row">
+            <button class="dpad-btn dpad-left" data-dir="left">&#9664;</button>
+            <button class="dpad-btn dpad-center">&#9679;</button>
+            <button class="dpad-btn dpad-right" data-dir="right">&#9654;</button>
+          </div>
+          <button class="dpad-btn dpad-down" data-dir="down">&#9660;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ALESSANDRO MACR&Igrave; &mdash; GAME OVER? NEVER.</p>
+      <p class="footer-hint">&#9650;&#9650;&#9660;&#9660;&#9664;&#9654;&#9664;&#9654;BA</p>
+    </div>
+  </footer>
+
+  <!-- Easter Egg Overlays -->
+  <div class="matrix-rain" id="matrixRain" aria-hidden="true">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+  <div class="secret-message" id="secretMessage" aria-hidden="true">
+    <div class="secret-content pixel-border">
+      <p>&#127775; SECRET FOUND! &#127775;</p>
+      <p>You're a curious one... I like that!</p>
+      <p>+9999 XP</p>
+    </div>
+  </div>
+  <div class="pixel-confetti" id="pixelConfetti" aria-hidden="true"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
