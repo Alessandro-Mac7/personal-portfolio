@@ -82,87 +82,8 @@
       </h2>
       <div class="about-grid">
         <div class="about-avatar">
-          <div class="pixel-avatar" id="pixelAvatar" aria-label="Pixel art avatar">
-            <div class="avatar-row">
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#f4c542"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#1a1a2e"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#1a1a2e"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#e8a87c"></span>
-              <span class="px" style="background:#e8a87c"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#c0392b"></span>
-              <span class="px" style="background:#c0392b"></span>
-              <span class="px" style="background:#c0392b"></span>
-              <span class="px" style="background:#c0392b"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#00d4ff"></span>
-              <span class="px" style="background:#00d4ff"></span>
-              <span class="px" style="background:#00d4ff"></span>
-              <span class="px" style="background:#00d4ff"></span>
-              <span class="px" style="background:#00d4ff"></span>
-              <span class="px" style="background:#00d4ff"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-            </div>
-            <div class="avatar-row">
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#f5d6a8"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-              <span class="px" style="background:#2d2d2d"></span>
-            </div>
+          <div class="photo-avatar" id="photoAvatar">
+            <img src="assets/profile.png" alt="Alessandro Macrì" width="200" height="200">
           </div>
         </div>
         <div class="about-info">
@@ -310,79 +231,132 @@
       </h2>
       <div class="projects-grid">
 
-        <div class="project-card reveal-section" data-index="0">
+        <div class="project-card reveal-section pixel-border" data-index="0"
+             data-title="ghostcommit"
+             data-desc="AI-powered CLI that generates commit messages by learning your coding style. Supports 5 providers (Groq, Gemini, Ollama, OpenAI, Anthropic) with a free-first approach. Smart diff processing chunks per-file, filters lock files, and prioritizes source code. Includes changelog generation, GitHub release creation, git hook integration, and single-keypress interactive flow. 224 tests, published on npm."
+             data-source="https://github.com/Alessandro-Mac7/ghostcommit" data-demo="https://www.npmjs.com/package/ghostcommit">
           <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
-          <div class="card-inner">
-            <div class="card-front pixel-border">
-              <div class="project-icon">&#127863;</div>
-              <h3>Wyn-AI</h3>
-              <p>An AI-powered sommelier that delivers real-time wine recommendations — scan a label, ask a question, get expert advice from your pocket.</p>
-              <div class="project-tags">
-                <span class="tag">Next.js</span>
-                <span class="tag">Multi-LLM</span>
-                <span class="tag">Vision AI</span>
-              </div>
-              <div class="card-hint">&#9654; HOVER FOR DETAILS</div>
-            </div>
-            <div class="card-back pixel-border">
-              <h3>Wyn-AI</h3>
-              <p>Full-stack AI sommelier platform with multi-provider LLM architecture (Groq, OpenAI, Anthropic) and automatic fallback. Features wine label OCR via Vision AI, fuzzy matching against venue inventories, QR-based restaurant mode, voice input, and a mobile-first experience built with Next.js, Supabase, and Capacitor.</p>
-              <div class="project-links">
-                <a href="#" class="pixel-link">&#128187; SOURCE</a>
-                <a href="#" class="pixel-link pixel-link-accent">&#9654; LIVE DEMO</a>
-              </div>
-            </div>
+          <div class="project-icon">&#128123;</div>
+          <h3>ghostcommit</h3>
+          <p>Your commits, ghostwritten by AI. A CLI that learns your style, works free out-of-the-box with local models, and handles diffs intelligently.</p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Multi-LLM</span>
           </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
         </div>
 
-        <div class="project-card reveal-section" data-index="1">
+        <div class="project-card reveal-section pixel-border" data-index="1"
+             data-title="spring-context-mcp"
+             data-desc="MCP server that gives AI deep architectural context on Spring Boot projects. Parses Java source code with JavaParser and exposes 9 tools: list endpoints, entities, services, repositories, beans, security rules, configurations, and a full architecture analysis with circular dependency detection and layering violation checks. Zero Spring dependencies — pure standalone Java."
+             data-source="https://github.com/Alessandro-Mac7/spring-context-mcp" data-demo="#">
           <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
-          <div class="card-inner">
-            <div class="card-front pixel-border">
-              <div class="project-icon">&#128141;</div>
-              <h3>Opus</h3>
-              <p>A premium digital wedding invitation platform — beautifully animated, fully customizable, with smart RSVP management built in.</p>
-              <div class="project-tags">
-                <span class="tag">Next.js 16</span>
-                <span class="tag">React 19</span>
-                <span class="tag">Supabase</span>
-              </div>
-              <div class="card-hint">&#9654; HOVER FOR DETAILS</div>
-            </div>
-            <div class="card-back pixel-border">
-              <h3>Opus</h3>
-              <p>SaaS platform for creating interactive digital invitations with GSAP/Framer Motion animations, three security modes (public, PIN, individual links), dietary tracking, drag-and-drop builders, QR guest codes, real-time analytics dashboard, and a complete admin suite. Built with Next.js 16, React 19, Supabase, and TailwindCSS.</p>
-              <div class="project-links">
-                <a href="#" class="pixel-link">&#128187; SOURCE</a>
-                <a href="#" class="pixel-link pixel-link-accent">&#9654; LIVE DEMO</a>
-              </div>
-            </div>
+          <div class="project-icon">&#128268;</div>
+          <h3>spring-context-mcp</h3>
+          <p>MCP server that gives AI assistants deep architectural understanding of Spring Boot projects — endpoints, entities, services, security, all via a single tool call.</p>
+          <div class="project-tags">
+            <span class="tag">Java 21</span>
+            <span class="tag">MCP Protocol</span>
+            <span class="tag">JavaParser</span>
           </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
         </div>
 
-        <div class="project-card reveal-section" data-index="2">
+        <div class="project-card reveal-section pixel-border" data-index="2"
+             data-title="Wyn-AI"
+             data-desc="Full-stack AI sommelier platform with multi-provider LLM architecture (Groq, OpenAI, Anthropic) and automatic fallback. Features wine label OCR via Vision AI, fuzzy matching against venue inventories, QR-based restaurant mode, voice input, GDPR compliance, and a mobile-first experience built with Next.js 14, Supabase, Zustand, and Capacitor for native iOS/Android."
+             data-source="https://github.com/Alessandro-Mac7/wyn-ai" data-demo="https://wyn-app.vercel.app">
           <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
-          <div class="card-inner">
-            <div class="card-front pixel-border">
-              <div class="project-icon">&#128269;</div>
-              <h3>Code-Troubleshooter</h3>
-              <p>An intelligent debugging system that reads your error logs, retrieves the actual code via RAG, and delivers precise, context-aware analysis.</p>
-              <div class="project-tags">
-                <span class="tag">n8n</span>
-                <span class="tag">RAG</span>
-                <span class="tag">AI Workflows</span>
-              </div>
-              <div class="card-hint">&#9654; HOVER FOR DETAILS</div>
-            </div>
-            <div class="card-back pixel-border">
-              <h3>Code-Troubleshooter</h3>
-              <p>Automated debugging pipeline built on n8n workflows and AI. Ingests error logs, uses Retrieval-Augmented Generation to fetch the relevant real code snippets from the codebase, and produces detailed root-cause analysis with actionable fix suggestions — grounded in actual source code, not hallucinated guesses.</p>
-              <div class="project-links">
-                <a href="#" class="pixel-link">&#128187; SOURCE</a>
-                <a href="#" class="pixel-link pixel-link-accent">&#9654; LIVE DEMO</a>
-              </div>
-            </div>
+          <div class="project-icon">&#127863;</div>
+          <h3>Wyn-AI</h3>
+          <p>An AI-powered sommelier — scan a wine label, chat with AI, and get expert recommendations matched to the restaurant's actual inventory via QR code.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Multi-LLM</span>
+            <span class="tag">Vision AI</span>
           </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
+        </div>
+
+        <div class="project-card reveal-section pixel-border" data-index="3"
+             data-title="Opus"
+             data-desc="SaaS platform for premium digital wedding invitations with GSAP and Framer Motion animations, three security modes (public, PIN, individual unique links), dietary tracking, drag-and-drop section builders, QR guest codes, real-time analytics dashboard, and a complete admin suite. Built with Next.js 16, React 19, Supabase, Radix UI, and TailwindCSS."
+             data-source="https://github.com/Alessandro-Mac7/opus" data-demo="#">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="project-icon">&#128141;</div>
+          <h3>Opus</h3>
+          <p>A premium digital wedding invitation platform — beautifully animated, fully customizable, with smart RSVP management and multi-level security built in.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js 16</span>
+            <span class="tag">React 19</span>
+            <span class="tag">Supabase</span>
+          </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
+        </div>
+
+        <div class="project-card reveal-section pixel-border" data-index="4"
+             data-title="AIMS"
+             data-desc="Mono-repo with two services: (1) AIMS — a Spring Boot 3.5 REST API for application and infrastructure monitoring with service health tracking, SLO management, dependency graphs, and Keycloak auth. (2) Codebase Troubleshooter — a FastAPI + Qdrant RAG system that semantically indexes codebases (Java, Python, C#, TypeScript), analyzes error logs, and generates context-aware debugging prompts. CI/CD via GitHub Actions."
+             data-source="https://github.com/Alessandro-Mac7/aims" data-demo="#">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="project-icon">&#128202;</div>
+          <h3>AIMS</h3>
+          <p>Application monitoring platform + RAG-powered code troubleshooter. Tracks service health and uses semantic search to analyze error logs against your actual codebase.</p>
+          <div class="project-tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">RAG</span>
+          </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
+        </div>
+
+        <div class="project-card reveal-section pixel-border" data-index="5"
+             data-title="Pizza Dough Calculator"
+             data-desc="Professional pizza dough calculator using baker's percentages. 12 preset pizza styles (Napoletana STG, Romana, Pinsa, Canotto, NY, Detroit, and more), 10 flour types with W-value and protein data, temperature-based yeast calculations, support for poolish and biga pre-ferments, a fermentation scheduler that works backward from pizza-ready time, recipe saving and sharing via URL, and a built-in Pizza Invaders mini-game. Deployed as PWA on GitHub Pages."
+             data-source="https://github.com/Alessandro-Mac7/pizza-dough-calculator" data-demo="https://alessandro-mac7.github.io/pizza-dough-calculator/">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="project-icon">&#127829;</div>
+          <h3>Pizza Dough Calculator</h3>
+          <p>Professional dough calculator with baker's percentages, 12 pizza styles, fermentation scheduler, and a built-in arcade mini-game. PWA, works offline.</p>
+          <div class="project-tags">
+            <span class="tag">Vue 3</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PWA</span>
+          </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
+        </div>
+
+        <div class="project-card reveal-section pixel-border" data-index="6"
+             data-title="La Via del Vangelo"
+             data-desc="Progressive Web App for daily Catholic gospel readings and spiritual reflections for the Missionari Della Via community. Features text highlighting, zoom controls, pull-to-refresh, date navigation with swipe gestures, Workbox-powered offline caching, and iOS/Android install support. Backend powered by Supabase Edge Functions with smart caching and exponential backoff retry logic."
+             data-source="https://github.com/MissionariDellaVia/mdv-gospel-way-app" data-demo="#">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="project-icon">&#128214;</div>
+          <h3>La Via del Vangelo</h3>
+          <p>A PWA for daily gospel readings with text highlighting, offline support, swipe navigation, and a polished mobile-first experience for the MDV community.</p>
+          <div class="project-tags">
+            <span class="tag">Vue 3</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">PWA</span>
+          </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
+        </div>
+
+        <div class="project-card reveal-section pixel-border" data-index="7"
+             data-title="MDV Mobile"
+             data-desc="Native mobile companion app for the Missionari della Via community, built with React Native and Expo SDK 54. Features daily gospel readings with commentary, date slider navigation, zoom toolbar for accessibility, video carousel, text highlighting with bookmarks, deep linking (mdv://gospel/:date), Supabase-powered backend with TTL caching, and full App Store / Google Play deployment readiness via EAS."
+             data-source="https://github.com/Alessandro-Mac7/mdv-mobile" data-demo="#">
+          <div class="achievement-banner">&#128275; ACHIEVEMENT UNLOCKED!</div>
+          <div class="project-icon">&#128241;</div>
+          <h3>MDV Mobile</h3>
+          <p>Native mobile app for daily gospel readings — React Native with Expo, deep linking, video content, bookmarks, and ready for App Store and Google Play.</p>
+          <div class="project-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Expo</span>
+            <span class="tag">Supabase</span>
+          </div>
+          <div class="card-hint">&#9654; CLICK FOR DETAILS</div>
         </div>
 
       </div>
@@ -418,6 +392,18 @@
           <div class="inventory-item reveal-section" data-tooltip="SQL — Data sorcery">
             <span class="item-icon">&#128451;</span>
             <span class="item-name">SQL</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="C++ — High-performance systems">
+            <span class="item-icon">&#9881;</span>
+            <span class="item-name">C++</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="PHP — Web scripting veteran">
+            <span class="item-icon">&#128302;</span>
+            <span class="item-name">PHP</span>
+          </div>
+          <div class="inventory-item reveal-section" data-tooltip="Perl — Text-wrangling legend">
+            <span class="item-icon">&#128042;</span>
+            <span class="item-name">Perl</span>
           </div>
         </div>
       </div>
@@ -806,6 +792,20 @@
     </div>
   </div>
   <div class="pixel-confetti" id="pixelConfetti" aria-hidden="true"></div>
+
+  <!-- Project Detail Modal -->
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal-backdrop"></div>
+    <div class="project-modal-content pixel-border">
+      <button class="project-modal-close" id="projectModalClose" aria-label="Close">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="project-links" id="modalLinks">
+        <a href="#" class="pixel-link" id="modalSource">&#128187; SOURCE</a>
+        <a href="#" class="pixel-link pixel-link-accent" id="modalDemo">&#9654; LIVE DEMO</a>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

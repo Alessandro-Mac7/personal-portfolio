@@ -369,6 +369,16 @@
   }
 
   // ============================================
+  // PHOTO AVATAR — click to reveal (mobile)
+  // ============================================
+  const photoAvatar = document.getElementById('photoAvatar');
+  if (photoAvatar) {
+    photoAvatar.addEventListener('click', () => {
+      photoAvatar.classList.toggle('revealed-photo');
+    });
+  }
+
+  // ============================================
   // CONTACT FORM HANDLING
   // ============================================
   const contactForm = document.getElementById('contactForm');
@@ -437,12 +447,57 @@
     }
   }
 
-  // Confetti on project card click
+  // ============================================
+  // PROJECT MODAL
+  // ============================================
+  const projectModal = document.getElementById('projectModal');
+  const projectModalClose = document.getElementById('projectModalClose');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalSource = document.getElementById('modalSource');
+  const modalDemo = document.getElementById('modalDemo');
+  const modalBackdrop = projectModal ? projectModal.querySelector('.project-modal-backdrop') : null;
+
+  function openProjectModal(card) {
+    if (!projectModal) return;
+    modalTitle.textContent = card.dataset.title || '';
+    modalDesc.textContent = card.dataset.desc || '';
+    modalSource.href = card.dataset.source || '#';
+    modalDemo.href = card.dataset.demo || '#';
+    projectModal.classList.add('active');
+    projectModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProjectModal() {
+    if (!projectModal) return;
+    projectModal.classList.remove('active');
+    projectModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', (e) => {
       spawnConfetti(e.clientX, e.clientY);
+      openProjectModal(card);
     });
   });
+
+  if (projectModalClose) projectModalClose.addEventListener('click', closeProjectModal);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeProjectModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
+      closeProjectModal();
+    }
+  });
+
+  // Stop link clicks inside modal from closing it
+  if (projectModal) {
+    projectModal.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => e.stopPropagation());
+    });
+  }
 
   // ============================================
   // SNAKE GAME
