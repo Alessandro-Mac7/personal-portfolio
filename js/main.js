@@ -450,54 +450,58 @@
   // ============================================
   // PROJECT MODAL
   // ============================================
-  const projectModal = document.getElementById('projectModal');
-  const projectModalClose = document.getElementById('projectModalClose');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDesc = document.getElementById('modalDesc');
-  const modalSource = document.getElementById('modalSource');
-  const modalDemo = document.getElementById('modalDemo');
-  const modalBackdrop = projectModal ? projectModal.querySelector('.project-modal-backdrop') : null;
+  (function initProjectModal() {
+    var modal = document.getElementById('projectModal');
+    if (!modal) return;
 
-  function openProjectModal(card) {
-    if (!projectModal) return;
-    modalTitle.textContent = card.dataset.title || '';
-    modalDesc.textContent = card.dataset.desc || '';
-    modalSource.href = card.dataset.source || '#';
-    modalDemo.href = card.dataset.demo || '#';
-    projectModal.classList.add('active');
-    projectModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
+    var titleEl = document.getElementById('modalTitle');
+    var descEl = document.getElementById('modalDesc');
+    var sourceEl = document.getElementById('modalSource');
+    var demoEl = document.getElementById('modalDemo');
+    var closeBtn = document.getElementById('projectModalClose');
+    var backdrop = modal.querySelector('.project-modal-backdrop');
 
-  function closeProjectModal() {
-    if (!projectModal) return;
-    projectModal.classList.remove('active');
-    projectModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-      spawnConfetti(e.clientX, e.clientY);
-      openProjectModal(card);
-    });
-  });
-
-  if (projectModalClose) projectModalClose.addEventListener('click', closeProjectModal);
-  if (modalBackdrop) modalBackdrop.addEventListener('click', closeProjectModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
-      closeProjectModal();
+    function open(card) {
+      titleEl.textContent = card.getAttribute('data-title') || '';
+      descEl.textContent = card.getAttribute('data-desc') || '';
+      sourceEl.href = card.getAttribute('data-source') || '#';
+      demoEl.href = card.getAttribute('data-demo') || '#';
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     }
-  });
 
-  // Stop link clicks inside modal from closing it
-  if (projectModal) {
-    projectModal.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', (e) => e.stopPropagation());
+    function close() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.project-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        // Don't open modal if clicking a link inside the card
+        if (e.target.closest('a')) return;
+        spawnConfetti(e.clientX, e.clientY);
+        open(card);
+      });
     });
-  }
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (backdrop) backdrop.addEventListener('click', close);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        close();
+      }
+    });
+
+    // Prevent modal link clicks from closing modal or triggering smooth scroll
+    modal.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+  })();
 
   // ============================================
   // SNAKE GAME
@@ -848,9 +852,12 @@
   // SMOOTH SCROLL for anchor links
   // ============================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    var href = anchor.getAttribute('href');
+    // Skip bare "#" links (buttons, placeholders)
+    if (!href || href === '#') return;
     anchor.addEventListener('click', (e) => {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const target = document.querySelector(href);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
