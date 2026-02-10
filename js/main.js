@@ -461,11 +461,23 @@
     var closeBtn = document.getElementById('projectModalClose');
     var backdrop = modal.querySelector('.project-modal-backdrop');
 
+    function hasRealLink(val) {
+      return val && val !== '#' && val !== '';
+    }
+
     function open(card) {
+      var source = card.getAttribute('data-source');
+      var demo = card.getAttribute('data-demo');
+
       titleEl.textContent = card.getAttribute('data-title') || '';
       descEl.textContent = card.getAttribute('data-desc') || '';
-      sourceEl.href = card.getAttribute('data-source') || '#';
-      demoEl.href = card.getAttribute('data-demo') || '#';
+
+      sourceEl.href = source || '#';
+      sourceEl.style.display = hasRealLink(source) ? '' : 'none';
+
+      demoEl.href = demo || '#';
+      demoEl.style.display = hasRealLink(demo) ? '' : 'none';
+
       modal.classList.add('active');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
